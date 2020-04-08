@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compound Interest Calculator</title>
+  </head>
+  <body>
+    <h1>Compound Interest Calculator</h1>
+    <form id="form">
+      <!-- Initial Deposit -->
+      <div class="step">
+        <label for="initial-deposit">Initial Deposit</label>
+        <div class="step-handler decrease-handler">-</div>
+        <input type="text" id="initial-deposit" value="$1000" />
+        <div class="step-handler increase-handler">+</div>
+      </div>
+      <!-- Contributions -->
+      <div class="step">
+        <label for="contributions">Contributions</label>
+        <div class="step-handler decrease-handler">-</div>
+        <input type="text" id="contributions" value="$100" />
+        <div class="step-handler increase-handler">+</div>
+        <label
+          ><input
+            type="radio"
+            class="contribution-periods"
+            name="contribution-frequency"
+            value="monthly"
+            checked
+          />monthly</label
+        >
+        <label
+          ><input
+            type="radio"
+            class="contribution-periods"
+            name="contribution-frequency"
+            value="annually"
+          />annually</label
+        ><br />
+      </div>
+      <!-- Investment Time Span -->
+      <div class="step">
+        <label for="time">Investment Time Span</label>
+        <div class="step-handler decrease-handler">-</div>
+        <input id="time" type="text" value="5" readonly="readonly" /> years
+        <div class="step-handler increase-handler">+</div>
+      </div>
+      <!-- Estimated Rate of Return -->
+      <div class="step">
+        <label for="rate-of-return">Estimated Rate of Return</label>
+        <div class="step-handler decrease-handler">-</div>
+        <input type="text" id="rate" value="0.00%" />
+        <div class="step-handler increase-handler">+</div>
+      </div>
+      <!-- Compound Frequency -->
+      <div class="step">
+        Compound Frequency<br />
+        <label>
+          <input
+            type="radio"
+            class="compound-frequency"
+            name="compound-frequency"
+            value="daily"
+          />daily</label
+        >
+        <label
+          ><input
+            type="radio"
+            class="compound-frequency"
+            name="compound-frequency"
+            checked
+            value="monthly"
+          />monthly</label
+        >
+        <label
+          ><input
+            type="radio"
+            class="compound-frequency"
+            name="compound-frequency"
+            value="quarterly"
+          />quarterly</label
+        >
+        <label
+          ><input
+            type="radio"
+            class="compound-frequency"
+            name="compound-frequency"
+            value="semiannually"
+          />semiannually</label
+        >
+        <label
+          ><input
+            type="radio"
+            class="compound-frequency"
+            name="compound-frequency"
+            value="annually"
+          />annually</label
+        ><br />
+      </div>
+      <button id="calculate-button">Calculate</button>
+    </form>
+    <!-- Message -->
+    <p id="message"></p>
+    <!-- Scripts -->
+    <script src="calculator-constants.js"></script>
+    <script src="calculator-functions.js"></script>
+    <script src="calculator-app.js"></script>
+  </body>
+</html>
