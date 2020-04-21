@@ -2,105 +2,128 @@
 <html>
   <head>
     <title>Compound Interest Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Roboto+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <h1>Compound Interest Calculator</h1>
-    <form id="form">
-      <!-- Initial Deposit -->
-      <div class="step">
-        <label for="initial-deposit">Initial Deposit</label>
-        <div class="step-handler decrease-handler">-</div>
-        <input type="text" id="initial-deposit" value="$1000" />
-        <div class="step-handler increase-handler">+</div>
-      </div>
-      <!-- Contributions -->
-      <div class="step">
-        <label for="contributions">Contributions</label>
-        <div class="step-handler decrease-handler">-</div>
-        <input type="text" id="contributions" value="$100" />
-        <div class="step-handler increase-handler">+</div>
-        <label
-          ><input
-            type="radio"
-            class="contribution-periods"
-            name="contribution-frequency"
-            value="monthly"
-            checked
-          />monthly</label
-        >
-        <label
-          ><input
-            type="radio"
-            class="contribution-periods"
-            name="contribution-frequency"
-            value="annually"
-          />annually</label
-        ><br />
-      </div>
-      <!-- Investment Time Span -->
-      <div class="step">
-        <label for="time">Investment Time Span</label>
-        <div class="step-handler decrease-handler">-</div>
-        <input id="time" type="text" value="5" readonly="readonly" /> years
-        <div class="step-handler increase-handler">+</div>
-      </div>
-      <!-- Estimated Rate of Return -->
-      <div class="step">
-        <label for="rate-of-return">Estimated Rate of Return</label>
-        <div class="step-handler decrease-handler">-</div>
-        <input type="text" id="rate" value="0.00%" />
-        <div class="step-handler increase-handler">+</div>
-      </div>
-      <!-- Compound Frequency -->
-      <div class="step">
-        Compound Frequency<br />
-        <label>
-          <input
-            type="radio"
-            class="compound-frequency"
-            name="compound-frequency"
-            value="daily"
-          />daily</label
-        >
-        <label
-          ><input
-            type="radio"
-            class="compound-frequency"
-            name="compound-frequency"
-            checked
-            value="monthly"
-          />monthly</label
-        >
-        <label
-          ><input
-            type="radio"
-            class="compound-frequency"
-            name="compound-frequency"
-            value="quarterly"
-          />quarterly</label
-        >
-        <label
-          ><input
-            type="radio"
-            class="compound-frequency"
-            name="compound-frequency"
-            value="semiannually"
-          />semiannually</label
-        >
-        <label
-          ><input
-            type="radio"
-            class="compound-frequency"
-            name="compound-frequency"
-            value="annually"
-          />annually</label
-        ><br />
-      </div>
-      <button id="calculate-button">Calculate</button>
-    </form>
-    <!-- Message -->
-    <p id="message"></p>
+    <div class="main-container">
+      <header>
+        <div class="text-container">
+          <h1>Compound Interest Calculator</h1>
+          <p>
+            Compound interest is the addition of interest to the principal sum
+            of a loan or deposit, or in other words, interest on interest. It is
+            the result of reinvesting interest, rather than paying it out, so
+            that interest in the next period is then earned on the principal sum
+            plus previously accumulated interest.
+          </p>
+        </div>
+      </header>
+      <form id="form">
+        <!-- Initial Deposit -->
+        <div class="step">
+          <label for="initial-deposit">Initial Deposit</label>
+          <div class="handler-input-container">
+            <div class="step-handler decrease-handler"></div>
+            <input type="text" id="initial-deposit" value="$1000" />
+            <div class="step-handler increase-handler"></div>
+          </div>
+        </div>
+        <!-- Contributions -->
+        <div class="step">
+          <label for="contributions">Contributions</label>
+          <div class="handler-input-container">
+            <div class="step-handler decrease-handler"></div>
+            <input type="text" id="contributions" value="$100" />
+            <div class="step-handler increase-handler"></div>
+          </div>
+          <div class="c-label-container">
+            <input
+              id="c-monthly"
+              type="radio"
+              class="contribution-periods"
+              name="contribution-frequency"
+              value="monthly"
+              checked
+            /><label for="c-monthly">monthly</label>
+            <input
+              id="c-annually"
+              type="radio"
+              class="contribution-periods"
+              name="contribution-frequency"
+              value="annually"
+            /><label for="c-annually">annually</label>
+          </div>
+        </div>
+        <!-- Investment Time Span -->
+        <div class="step">
+          <label for="time">Investment Time Span</label>
+          <div class="handler-input-container">
+            <div class="step-handler decrease-handler"></div>
+            <input id="time" type="text" value="5" readonly="readonly" />
+            <div class="step-handler increase-handler"></div>
+            <span class="time-length">years</span>
+          </div>
+        </div>
+        <!-- Estimated Rate of Return -->
+        <div class="step">
+          <label for="rate-of-return">Estimated Rate of Return</label>
+          <div class="handler-input-container">
+            <div class="step-handler decrease-handler"></div>
+            <input type="text" id="rate" value="0.00%" />
+            <div class="step-handler increase-handler"></div>
+          </div>
+        </div>
+        <!-- Compound Frequency -->
+        <div class="step">
+          <label>Compound Frequency</label><br />
+          <div class="cp-label-container">
+            <input
+              id="cp-daily"
+              type="radio"
+              class="compound-frequency"
+              name="compound-frequency"
+              value="daily"
+            /><label for="cp-daily">daily</label>
+            <input
+              id="cp-monthly"
+              type="radio"
+              class="compound-frequency"
+              name="compound-frequency"
+              checked
+              value="monthly"
+            /><label for="cp-monthly">monthly</label>
+            <input
+              id="cp-quarterly"
+              type="radio"
+              class="compound-frequency"
+              name="compound-frequency"
+              value="quarterly"
+            /><label for="cp-quarterly">quarterly</label>
+            <input
+              id="cp-semiannually"
+              type="radio"
+              class="compound-frequency"
+              name="compound-frequency"
+              value="semiannually"
+            /><label for="cp-semiannually">semiannually</label>
+            <input
+              id="cp-annually"
+              type="radio"
+              class="compound-frequency"
+              name="compound-frequency"
+              value="annually"
+            /><label for="cp-annually">annually</label>
+          </div>
+        </div>
+        <button id="calculate-button">Calculate Interest</button>
+      </form>
+      <!-- Message -->
+      <p id="message"></p>
+    </div>
     <!-- Scripts -->
     <script src="js/calculator-constants.js"></script>
     <script src="js/calculator-functions.js"></script>

@@ -1,0 +1,24 @@
+// Calculate button
+
+#calculate-button {
+  border: none;
+  background: $green;
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+  color: $white;
+  font-family: $font-stack;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 20rem;
+  height: 6rem;
+  box-shadow: 0 0 0.5rem $green2;
+}
+
+#calculate-button:hover {
+  background: darken($green, 3%);
+  transform: scale(0.95);
+  font-size: 1.4rem;
+  box-shadow: none;
+}
