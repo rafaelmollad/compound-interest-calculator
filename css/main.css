@@ -1,0 +1,216 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  padding: 2rem 5rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  color: #888;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #00b074;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#calculate-button {
+  border: none;
+  background: #00b074;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 15rem;
+  height: 5rem;
+  -webkit-box-shadow: 0 0 0.5rem #008e5e;
+          box-shadow: 0 0 0.5rem #008e5e;
+}
+
+#calculate-button:hover {
+  background: #00a16a;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  font-size: 1.4rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.step {
+  padding: 1rem;
+}
+
+.step label {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.step .time-length {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.step .handler-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.2rem 0;
+}
+
+.step .handler-input-container input {
+  border: none;
+  border-top: 0.01rem solid #c1cec1;
+  border-bottom: 0.01rem solid #c1cec1;
+  outline: none;
+  width: 30%;
+  height: 4rem;
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: "Roboto Mono";
+}
+
+.step .handler-input-container .step-handler {
+  width: 4.6rem;
+  position: relative;
+  cursor: pointer;
+  border: 0.1rem solid #c1cec1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #fff;
+  font-weight: 300;
+}
+
+.step .handler-input-container .decrease-handler {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.step .handler-input-container .decrease-handler::before {
+  content: "-";
+  font-size: 2.7rem;
+  font-weight: 400;
+  position: absolute;
+  color: #00b074;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.step .handler-input-container .increase-handler {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.step .handler-input-container .increase-handler::before {
+  content: "+";
+  font-weight: 400;
+  font-size: 2.7rem;
+  position: absolute;
+  color: #00b074;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.step .c-label-container {
+  margin-top: 1.5rem;
+}
+
+header .text-container {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+header .text-container h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+header .text-container p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  font-family: "Roboto Mono";
+  color: #888;
+  width: 50%;
+}
+
+#form {
+  background: #fafbfa;
+  display: inline-block;
+  padding: 3rem 6rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 20px #eee;
+          box-shadow: 0 0 20px #eee;
+  border: 1px solid #f6f6f6;
+}
+/*# sourceMappingURL=main.css.map */
