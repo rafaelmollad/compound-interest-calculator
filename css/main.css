@@ -75,7 +75,6 @@ body {
 #calculate-button {
   border: none;
   background: #00b074;
-  padding: 2rem 4rem;
   font-size: 1.5rem;
   color: #fff;
   font-family: "Lato", sans-serif;
@@ -84,8 +83,8 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  width: 20rem;
-  height: 6rem;
+  width: 15rem;
+  height: 5rem;
   -webkit-box-shadow: 0 0 0.5rem #008e5e;
           box-shadow: 0 0 0.5rem #008e5e;
 }

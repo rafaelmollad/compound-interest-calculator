@@ -3,7 +3,6 @@
 #calculate-button {
   border: none;
   background: $green;
-  padding: 2rem 4rem;
   font-size: 1.5rem;
   color: $white;
   font-family: $font-stack;
@@ -11,8 +10,8 @@
   margin-top: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  width: 20rem;
-  height: 6rem;
+  width: 15rem;
+  height: 5rem;
   box-shadow: 0 0 0.5rem $green2;
 }
 
